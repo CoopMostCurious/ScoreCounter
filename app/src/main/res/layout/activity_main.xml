@@ -11,7 +11,7 @@
         android:src="@drawable/basketball_background" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -24,21 +24,21 @@
         android:id="@+id/home_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@id/header"
         android:layout_marginTop="82dp"
-        android:layout_toLeftOf="@+id/textView"
+        android:layout_toLeftOf="@id/header"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/visitor_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/home_score"
-        android:layout_toRightOf="@+id/textView"
+        android:layout_alignTop="@id/home_score"
+        android:layout_toRightOf="@id/header"
         android:text="TextView" />
 
     <Button
-        android:id="@+id/2_point_goal"
+        android:id="@+id/points_2_goal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -50,28 +50,26 @@
         android:id="@+id/free_throw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/2_point_goal"
-        android:layout_alignBottom="@+id/2_point_goal"
+        android:layout_alignBaseline="@+id/points_2_goal"
+        android:layout_alignBottom="@+id/points_2_goal"
         android:layout_alignRight="@+id/home_score"
         android:text="Button" />
 
     <Button
-        android:id="@+id/3_point_goal"
+        android:id="@+id/points_3_goal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/2_point_goal"
-        android:layout_alignBottom="@+id/2_point_goal"
-        android:layout_alignLeft="@+id/visitor_score"
+        android:layout_alignBaseline="@id/points_2_goal"
+        android:layout_alignBottom="@id/points_2_goal"
+        android:layout_alignLeft="@id/visitor_score"
         android:text="Button" />
 
-    <ToggleButton
-        android:id="@+id/teamSwitcher"
+    <Button
+        android:id="@+id/team_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/3_point_goal"
-        android:layout_alignLeft="@+id/3_point_goal"
-        android:text="ToggleButton"
-        android:textOff="VISITOR"
-        android:textOn="HOME" />
+        android:layout_above="@id/free_throw"
+        android:layout_alignLeft="@id/free_throw"
+        android:text="Button" />
 
 </RelativeLayout>
